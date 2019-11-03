@@ -3,7 +3,7 @@
                 'list-group-item-danger': post.loveIts < 0}">
   <div class="row">
     <span class="h2 col-md-6" [ngStyle]="{color: getColor()}"><strong [ngClass]="{'text-success': post.loveIts > 0,
-                                                                         'text-danger' : post.loveIts < 0}">{{ post.title }}</strong></span>
+                                                                                  'text-danger' : post.loveIts < 0}">{{ post.title }}</strong></span>
     <span class="col-md-6" style="color: gray; float:right">{{ post.createdAt | date: 'short' | uppercase }}</span>
   </div>
   <div class="row col-md-12">
@@ -11,6 +11,6 @@
   </div>
   <div class="row col-md-12">
     <button class="btn btn-success" (click)="onUpvote()">Love it!</button>
-    <button class="btn btn-danger" (click)="onDownvote()">Don't lo it!</button>
+    <button class="btn btn-danger" (click)="onDownvote()">Don't love it!</button>
   </div>
 </li>
