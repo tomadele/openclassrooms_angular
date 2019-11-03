@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Post} from './post';
 
 @Component({
   selector: 'app-root',
@@ -7,23 +8,30 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  isAuth = false;
 
-  appareils = [
-    {
-      name: 'Machine à laver',
-      status: 'éteint'
-    },
-    {
-      name: 'Frigo',
-      status: 'allumé'
-    },
-    {
-      name: 'Ordinateur',
-      status: 'éteint'
-    }
+  posts = [
+    new Post(
+      'Mon premier post',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ' +
+      'ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis'
+    ),
+    new Post(
+      'Mon deuxième post',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ' +
+      'ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis'
+    ),
+    new Post(
+      'Encore un post',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ' +
+      'ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ' +
+      'nisi ut aliquip ex ea commodo'
+    )
   ];
 
   constructor() { }
+
+  getPosts() {
+    return this.posts;
+  }
 
 }
