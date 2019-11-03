@@ -2,15 +2,11 @@
                 'list-group-item-success': post.loveIts > 0,
                 'list-group-item-danger': post.loveIts < 0}">
   <div class="row">
-    <span class="h2 col-md-6" [ngStyle]="{color: getColor()}"><strong [ngClass]="{'text-success': post.loveIts > 0,
+    <span class="h2 col-lg-10" style="margin-top: 0px" [ngStyle]="{color: getColor()}"><strong [ngClass]="{'text-success': post.loveIts > 0,
                                                                                   'text-danger' : post.loveIts < 0}">{{ post.title }}</strong></span>
-    <span class="col-md-6" style="color: gray; float:right">{{ post.createdAt | date: 'short' | uppercase }}</span>
+    <i class="date col-lg-2">{{ post.createdAt | date: 'short' | uppercase }}</i>
   </div>
-  <div class="row col-md-12">
-    <p>{{ post.content }}</p>
-  </div>
-  <div class="row col-md-12">
-    <button class="btn btn-success" (click)="onUpvote()">Love it!</button>
-    <button class="btn btn-danger" (click)="onDownvote()">Don't love it!</button>
-  </div>
+  <p>{{ post.content }}</p>
+  <button class="btn btn-success" (click)="onUpvote()">Love it!</button>
+  <button class="btn btn-danger" (click)="onDownvote()">Don't love it!</button>
 </li>
