@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './mon-premier.component.html',
   styleUrls: ['./mon-premier.component.scss']
 })
+
 export class MonPremierComponent implements OnInit {
 
   title = 'mon-premier';

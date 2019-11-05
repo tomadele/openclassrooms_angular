@@ -9,6 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
 
+  lastUpdate = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 2000
+    );
+  });
+
   appareils = [
     {
       name: 'Machine à laver',
@@ -24,6 +33,12 @@ export class AppComponent {
     }
   ];
 
-  constructor() { }
+  constructor() {
+    setTimeout(
+      () => {
+        this.isAuth = true;
+      }, 4000
+    );
+  }
 
 }
